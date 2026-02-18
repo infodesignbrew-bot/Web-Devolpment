@@ -341,17 +341,17 @@ export default function Contact() {
                           type="submit"
                           disabled={loading}
                           className="
-          w-full h-12
-          bg-slate-900
-          hover:bg-slate-800
-          text-white
-          text-sm font-medium
-          rounded-lg
-          transition
-          disabled:opacity-60
-        "
+    w-full h-12
+    bg-slate-900
+    hover:bg-slate-800
+    text-white
+    text-sm font-medium
+    rounded-lg
+    transition
+    disabled:opacity-60
+  "
                         >
-                          {submitMutation.isPending ? (
+                          {loading ? (
                             <Loader2 className="animate-spin" />
                           ) : (
                             <span className="flex items-center justify-center gap-2 font-bold">
@@ -360,6 +360,7 @@ export default function Contact() {
                             </span>
                           )}
                         </Button>
+
                       </div>
 
                     </form>
