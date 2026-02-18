@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-display: 'The Seasons', 'Lovelace', serif;
+}
+
+footer ::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+
+:root {
+  /* Base */
+  --background: 35 40% 92%;        /* Crème Beige (≈50%) */
+  --foreground: 210 15% 15%;       /* Charcoal Black */
+
+  /* Surfaces */
+  --card: 35 35% 88%;              /* Light Beige */
+  --card-foreground: 210 15% 15%;
+
+  --popover: 35 35% 88%;
+  --popover-foreground: 210 15% 15%;
+
+  /* Primary (Charcoal) */
+  --primary: 210 15% 15%;
+  --primary-foreground: 35 40% 92%;
+
+  /* Secondary (Beige Brown) */
+  --secondary: 28 22% 55%;
+  --secondary-foreground: 210 15% 15%;
+
+  /* Muted */
+  --muted: 35 20% 80%;
+  --muted-foreground: 210 10% 35%;
+
+  /* Accent (Burgundy — VERY limited use) */
+  --accent: 350 45% 32%;
+  --accent-foreground: 35 40% 92%;
+
+  /* States */
+  --destructive: 0 65% 45%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Borders */
+  --border: 35 18% 75%;
+  --input: 35 18% 75%;
+  --ring: 350 45% 32%;
+
+  --radius: 0.75rem;
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-panel {
+    @apply bg-white/50 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Reenie+Beanie&display=swap');
+
+.font-handwriting {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.font-marker {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+.font-handwriting { font-family: 'Patrick Hand', cursive; }
