@@ -17,6 +17,7 @@ export const insertContactSchema = createInsertSchema(contactSubmissions)
     id: true,
     createdAt: true,
   })
+
   .extend({
     name: z.string().nonempty("Name is required").min(3, "Enter at least 3 characters"),
     email: z.string().nonempty("Email is required").email("Enter a valid email address"),
@@ -24,7 +25,8 @@ export const insertContactSchema = createInsertSchema(contactSubmissions)
       .string()
       .nonempty("Contact is required")
       .refine((val) => {
-        const phoneNumber = parsePhoneNumberFromString(val);
+        const numberToParse = val.startsWith("+") ? val : `+${val}`;
+        const phoneNumber = parsePhoneNumberFromString(numberToParse);
         return phoneNumber?.isValid() ?? false;
       }, "Enter a valid phone number"),
     message: z
