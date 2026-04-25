@@ -17,9 +17,6 @@ export default function About() {
         <HeroSection />
         <EngineeringGrowth />
         <Numbers />
-        {/* <ISO /> */}
-        {/* <GlobalImpact /> */}
-        {/* <Events /> */}
         <TopServices/>
         <OurApproach/>
         <OurStory/>
