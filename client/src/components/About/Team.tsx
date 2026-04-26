@@ -83,7 +83,7 @@ const Team = () => {
             <div className="flex items-center gap-2 mb-6">
               <span className="h-px w-8 bg-primary"></span>
               <span className="text-primary font-mono text-sm font-semibold tracking-widest uppercase">
-                Founder & Serial Entrepreneur
+                Founder & Business Branding Consultant
               </span>
             </div>
 
