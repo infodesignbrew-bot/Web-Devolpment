@@ -88,7 +88,7 @@ const features = [
   }
 ];
 
-const elevateImg = getImage("Work/confident.avif", 1200);
+const elevateImg = getImage("Work/confident.avif?v=1", 1200);
 
 export default function ProcessSection() {
   return (
