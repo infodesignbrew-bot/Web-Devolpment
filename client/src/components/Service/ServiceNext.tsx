@@ -88,7 +88,7 @@ const features = [
   }
 ];
 
-const elevateImg = getImage("Work/confident.avif?v=1", 1200);
+const elevateImg = getImage("Work/confident.avif?v=2", 1200);
 
 export default function ProcessSection() {
   return (
@@ -184,7 +184,7 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-28"
+          className="mt-40 md:mt-28"
         >
           <div className="relative max-w-5xl mx-auto rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-800 shadow-2xl overflow-hidden">
             
@@ -193,7 +193,7 @@ export default function ProcessSection() {
             <div className="flex flex-col md:flex-row">
                 
                 {/* Left Side: Image */}
-                <div className="w-full md:w-2/5 relative h-64 md:h-auto">
+                <div className="w-full md:w-2/5 relative aspect-[2/3] md:aspect-auto overflow-hidden">
                     <div className="absolute inset-0 bg-slate-900/30 mix-blend-multiply z-10 transition-opacity opacity-0 duration-500" />
                     <img 
   src={elevateImg}
